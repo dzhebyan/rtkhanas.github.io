@@ -1,38 +1,62 @@
 import React, { Component } from 'react';
-import AppContainer from '../components-styled/AppContainer';
-import Content from '../components-styled/Content';
-import Footer from '../components-styled/Footer';
-import GitHubImage from '../components-styled/GitHubImage';
-import Header from '../components-styled/Header';
-import Link from '../components-styled/Link';
-import Paragraph from '../components-styled/Paragraph';
-import Title from '../components-styled/Title';
+import {
+  AppContainer,
+  Content,
+  Footer,
+  Header,
+  Link,
+  Paragraph,
+  SubTitle,
+  Title,
+} from 'ross-ui';
+import SocialIcon from '../components-styled/SocialIcon';
 
 export default class App extends Component {
   render() {
     const repositoryLink = 'https://github.com/rtkhanas/rtkhanas.github.io';
+    const socialIconColor = '#606060';
+    const socialIconStyle = { height: 40, width: 40 };
     return (
       <AppContainer>
-        <Link href={repositoryLink} >
-          <GitHubImage
-            alt="Fork me on GitHub"
-            data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
-            src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
-          />
-        </Link>
         <Header>
           <Title>Rostyslav Khanas</Title>
           <Paragraph>
             I'm a Samsung Electronics web developer and create open sourced stuff on a GitHub, based on Node.js and React.
           </Paragraph>
-          <Paragraph>
-            A project by <Link href="https://github.com/rtkhanas">Ross Khanas</Link>.
-          </Paragraph>
         </Header>
         <Content>
+          <SubTitle>About</SubTitle>
+          <ul>
+            <li>I currently work at <Link href="http://www.samsung.com">Samsung Electronics</Link>.</li>
+            <li>I used to work at <Link href="https://www.interlogic.com.ua/dk/">InterLogic</Link> and <Link href="http://perfectial.com/">Perfectial</Link>.</li>
+            <li>I'm originally from the west part of Ukraine, growing up and then living in Lviv for school and university. It was home for many years before moving to Seoul.</li>
+            <li>I graduated from <Link href="http://www.lnu.edu.ua/en/">Ivan Franko National University of Lviv</Link> in 2014 with a BS degree in Applied Math and Informatics.</li>
+            <li>I'm social on <Link href="https://twitter.com/rtkhanas">Twitter</Link> and <Link href="https://www.facebook.com/rtkhanas">Facebook</Link>.</li>
+            <li>I put code on <Link href="https://github.com/rtkhanas">GitHub</Link>.</li>
+            <li>When I remember, I put photos on <Link href="https://www.instagram.com/rtkhanas/">Instagram</Link>.</li>
+            <li>I have a <Link href="https://www.linkedin.com/in/rtkhanas/">LinkedIn</Link> and an <Link href="https://angel.co/rostyslav-khanas">AngelList</Link> accounts.</li>
+            <li>I have my <Link href="/Resume_Khanas.pdf">résumé</Link> as well..</li>
+          </ul>
+          <SubTitle>Contact</SubTitle>
+          <div>
+            If you want the quickest & shortest response, <Link href="https://twitter.com/rtkhanas">Twitter</Link> or <Link href="https://www.facebook.com/rtkhanas">Facebook</Link> are probably the best ways. Otherwise, I do my best to respond to <Link href="mailto:rtkhanas@gmail.com">email</Link> as quickly as possible.
+          </div>
         </Content>
         <Footer>
-          Released under the <Link href={`${repositoryLink}/blob/master/LICENSE`}>MIT license</Link>. <Link href={repositoryLink} >View source</Link>.
+          <div>
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://facebook.com/rostyslav.khanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://twitter.com/rtkhanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://kr.linkedin.com/in/rtkhanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://plus.google.com/u/0/116889127726941605887" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://github.com/rtkhanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://medium.com/@rtkhanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://instagram.com/rtkhanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://quora.com/rtkhanas" />
+            <SocialIcon color={socialIconColor} style={socialIconStyle} url="https://angel.co/rostyslav-khanas" />
+          </div>
+          <div>
+            Released under the <Link href={`${repositoryLink}/blob/master/LICENSE`}>MIT license</Link>. <Link href={repositoryLink} >View source</Link>.
+          </div>
         </Footer>
       </AppContainer>
     );
