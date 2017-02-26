@@ -35,7 +35,7 @@ export default class App extends Component {
             <li>I put code on <Link href="https://github.com/rtkhanas">GitHub</Link>.</li>
             <li>When I remember, I put photos on <Link href="https://www.instagram.com/rtkhanas/">Instagram</Link>.</li>
             <li>I have a <Link href="https://www.linkedin.com/in/rtkhanas/">LinkedIn</Link> and an <Link href="https://angel.co/rostyslav-khanas">AngelList</Link> accounts.</li>
-            <li>I have my <Link href="/Resume_Khanas.pdf">résumé</Link> as well..</li>
+            <li>I have my <Link href="./demo/build/Resume_Khanas.pdf">résumé</Link> as well..</li>
           </ul>
           <SubTitle>Contact</SubTitle>
           <div>
